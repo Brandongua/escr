@@ -1,0 +1,29 @@
+println(if "hi" then
+    "true"
+else
+    "false"
+fi, " == ", "true");
+
+println(if "" then
+    "true"
+else
+    "false"
+fi, " == ", "false");
+
+println(if 0 then
+    "true"
+else
+    "false"
+fi, " == ", "false");
+
+println(if 1 then
+    "true"
+else
+    "false"
+fi, " == ", "true");
+
+println(if 100 then
+    "true"
+else
+    "false"
+fi, " == ", "true")

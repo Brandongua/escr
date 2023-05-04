@@ -1,0 +1,15 @@
+var exp(x, y) =
+    if y == 0 then
+        1
+    else
+        var i = 1;
+        var ans = x;
+        while i < y do
+            i = i + 1;
+            ans = ans * x
+        end
+    fi
+rav;
+    
+
+print(exp(2, 0))

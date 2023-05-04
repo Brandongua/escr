@@ -1,0 +1,5 @@
+println((var f(x) =
+    x + 3
+rav)(3));
+
+println(f(10))

@@ -1,0 +1,9 @@
+var factorial(x) =
+    if x < 2 then
+        x
+    else
+        x * factorial(x - 1)
+    fi
+rav;
+
+println(factorial(3))

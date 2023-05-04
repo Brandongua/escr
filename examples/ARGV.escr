@@ -1,0 +1,4 @@
+var f() =
+    print(ARGV)
+rav;
+f(10)

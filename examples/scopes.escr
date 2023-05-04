@@ -1,0 +1,10 @@
+var z(y) =
+    println("[z] x = ", x);
+    println("[z] y = ", y)
+rav;
+var f(x) =
+    println("[f] x = ", x);
+    z(10)
+rav;
+
+f(1)

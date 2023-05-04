@@ -1,0 +1,12 @@
+var in(prompt) =
+    print(prompt);
+    input()
+rav;
+
+struct Person = name, age end;
+
+var setup_person() =
+    Person(in("Name: "), in("Age: "))
+rav;
+    
+var me = setup_person();

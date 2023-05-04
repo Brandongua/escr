@@ -1,0 +1,5 @@
+var f(x) =
+    x * 10
+rav;
+
+f(10) | print(PIPE)

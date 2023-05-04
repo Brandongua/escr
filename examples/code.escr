@@ -1,0 +1,6 @@
+var x = code 
+    var x = 10;
+    x = 100
+ edoc;
+
+print(repr(x))

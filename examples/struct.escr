@@ -1,0 +1,15 @@
+struct Person =
+    age,
+    name
+end;
+
+var print_person(p) =
+    print("age: ", p.age, "\n");
+    print("name: ", p.name, "\n")
+rav;
+
+var euro = Person(100, "euro");
+
+var eurocopy = set(euro, "age", 500);
+
+print_person(euro)

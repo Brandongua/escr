@@ -1,0 +1,38 @@
+list: LBRACKET (statement ("," statement)*)? RBRACKET
+
+node-literal: KEYWORD:"code" multi-statement KEYWORD:"edoc"
+
+literal: number | string | IDENT | list | node-literal
+
+var-re-assign: dotted-ident "=" statement
+
+atom: literal | var-re-assign
+
+factor: (atom | LPAREN multi-statement RPAREN) ("." IDENT)*
+
+unop: (PLUS | MINUS)? factor (LPAREN (statement ",")* RPAREN)?
+
+term: unop ((MUL | DIV) unop)*
+
+arith: term ((PLUS | MINUS) term)*
+
+expr: arith
+
+pipe: expr (PIPE expr)*
+
+comp: pipe ((GE | GT | LT | LE | EQ EQ) pipe)
+
+var-assign: IDNET "=" statement
+          : IDENT LPAREN (IDENT ",")* RPAREN "=" multi-statement KEYWORD:"rav"
+
+if-statement: statement KEYWORD:"then" multi-statement (KEYWORD:"else" multi-statement) KEYWORD:"fi"
+
+while-loop: statement KEYWORD:"do" multi-statement KEYWORD:"end"
+
+struct-create: IDENT "=" IDENT ("," IDENT)* KEYWORD:"end"
+
+statement: comp | KEYWORD:"var" var-assign | KEYWORD:"if" if-statement | KEYWORD:"while" while-loop | KEYWORD:"struct" struct-create
+
+multi-statement: statement (SEMI statement)* SEMI?
+
+program: multi-statement
